@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.carrossel {
+    display: flex;
+    grid-gap: 1rem;
+    max-width: 700px;
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x;
+    cursor: grab;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.carrossel::-webkit-scrollbar {
+    display: none; /*Para Chrome*/
+}
+
+.slide {
+    min-width: calc(100% - .5rem);
+    height: 100px;
+    background-color: #000;
+    align-content: center;
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    aspect-ratio: 1 / 1;
+    scroll-snap-align: start;
+    font-weight: 600;
+    user-select: none;
+}
